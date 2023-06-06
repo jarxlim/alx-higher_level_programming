@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * insert_node - inserts a node in a sorted linked list
+ * insert_node - function that adds a node in a sorted linked list
  * @head: the head of the linked list
  * @number: data in the new node
- * Return: address of the new node
+ * Return: the new node
  */
 
 listint_t *insert_node(listint_t **head, int number)
@@ -29,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	while (first->next != NULL)
 	{
-		if ((first->next->n > new->n && first->n < newnode->n)
+		if ((first->next->n > new->n && first->n < new->n)
 			|| new->n == first->n)
 		{
 			new->next = first->next;
