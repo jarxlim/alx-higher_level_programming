@@ -2,4 +2,5 @@
 def no_c(my_string):
     for char in my_string:
         if char == chr(67) or i == chr(99):
-            return my_string.remove(char)
+            my_string.remove(char)
+            return my_string
