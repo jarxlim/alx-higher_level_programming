@@ -5,7 +5,7 @@
 */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t index;
+	Py_ssize_t index, py_list_size;
 	PyObject *item;
 	const char *item_type;
 	PyListObject *list_object_cast;
