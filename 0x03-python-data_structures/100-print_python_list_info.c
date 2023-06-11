@@ -1,15 +1,11 @@
 #include "Python.h"
 /**
- * print_python_list_info - Prints information about python objects
+ * print_python_list_info - information about python objects
  * @p: PyObject pointer to print info about
- * Compile with:
- * gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared
- (* -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4
- (* 100-print_python_list_info.c
 */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t i, py_list_size;
+	Py_ssize_t index;
 	PyObject *item;
 	const char *item_type;
 	PyListObject *list_object_cast;
@@ -19,10 +15,10 @@ void print_python_list_info(PyObject *p)
 
 	printf("[*] Size of the Python List = %d\n", (int) py_list_size);
 	printf("[*] Allocated = %d\n", (int)list_object_cast->allocated);
-	for (i = 0; i < py_list_size; i++)
+	for (index = 0; index < py_list_size; index++)
 	{
-		item = PyList_GetItem(p, i);
+		item = PyList_GetItem(p, index);
 		item_type = Py_TYPE(item)->tp_name;
-		printf("Element %d: %s\n", (int) i, item_type);
+		printf("Element %d: %s\n", (int) index, item_type);
 	}
 }
