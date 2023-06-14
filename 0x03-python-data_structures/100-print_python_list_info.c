@@ -1,6 +1,6 @@
 #include "Python.h"
 /**
- * print_python_list_info - information about python objects
+ * print_python_list_info - info about python objects
  * @p: PyObject pointer to print info about
 */
 void print_python_list_info(PyObject *p)
