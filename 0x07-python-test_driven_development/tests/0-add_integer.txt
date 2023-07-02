@@ -31,12 +31,6 @@ checking for addition of a number and string
 	  ...
 	TypeError: b must be an integer
 
-passing no arguement to the function
-	>>>  add_integer(none)
-	Traceback (most recent call last):
-	 ...
-	TypeError: a must be an integer
-
 Checking for passed NaN
 	>>> add_integer(1, float('nan'))
 	Traceback (most recent call last):
@@ -48,3 +42,9 @@ Checking for passed inf
 	Traceback (most recent call last):
         ...
 	OverflowError: cannot convert float infinity to integer
+
+Checking more than 2 arguements:
+	 >>> add_integer(1, 2, 3)
+         Traceback (most recent call last):
+         ...
+	 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
