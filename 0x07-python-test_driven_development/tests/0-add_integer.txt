@@ -1,0 +1,50 @@
+Test cases for 0-add_integer.py
+=================================
+This module contains a function that takes two integers, or floats, sums them up and returns an integer. The result must be an integer.
+
+importing function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+checking for addition of positive numbers
+	>>> add_integer(5, 56)
+	61
+
+checking for addition of two negative numbers
+	>>> add_integer(-4, -3)
+	-7
+
+checking for one positive and one negative numbers
+	>>> add_integer(-6, 8)
+	2
+
+checking for addition of two floats
+	>>> add_integer(5.4, 2.0)
+	7
+
+adding a float with an integer
+	>>> add_integer(3.3, 7)
+	10
+
+checking for addition of a number and string
+	>>> add_integer(4, "chike")
+	Traceback (most recent call last):
+	  ...
+	TypeError: b must be an integer
+
+passing no arguement to the function
+	>>>  add_integer(none)
+	Traceback (most recent call last):
+	 ...
+	TypeError: a must be an integer
+
+Checking for passed NaN
+	>>> add_integer(1, float('nan'))
+	Traceback (most recent call last):
+        ...
+	ValueError: cannot convert float NaN to integer
+
+Checking for passed inf
+	>>> add_integer(1, float('inf'))
+	Traceback (most recent call last):
+        ...
+	OverflowError: cannot convert float infinity to integer
