@@ -1,0 +1,47 @@
+Test cases for 5-text_indentation
+===================================
+
+
+import function from module:
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+checking when no args are passed:
+	>>> text_indentation()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+checking when more than one arg is passed:
+	>>> text_indentation("Hello", "Hi")
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+checking for characters('. ? :'):
+	>>> text_indentation(" . ? : ")
+	.
+	?
+	:
+
+Checking for passing None:
+	 >>> text_indentation(None)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text must be a string
+
+checking for passing int:
+	Checking for passing None:
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+checking for three sentence with spaces at the begining and nend:
+	>>> text_indentation(" Hello Chike. How are you doing? kee ije? ")
+	Hello Chike.
+	How are you doing?
+	kee ije?
+
+checking for just one word:
+	>>> text_indentation('Hello')
+	Hello

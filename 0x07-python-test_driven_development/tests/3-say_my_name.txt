@@ -1,0 +1,36 @@
+Test cases for 3-say_my_name
+====================================
+
+this module will define the function say_my_name which displays firstnmae and lastname
+
+importing function from module:
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+checking for string in both firstname and lastname:
+	>>> say_my_name('Chike', 'Chima')
+	My name is Chike Chima
+	>>> say_my_name('Emmanuel', 'Okafor')
+	My name is Emmanuel Okafor
+
+Passing an int as firstname and/or lastname
+	>>> say_my_name(4, "Chima")
+        Traceback (most recent call last):
+        ...
+	TypeError: first_name must be a string
+	
+	>>> say_my_name('Chike', 8)
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+passing none as last_name or first_name:
+	>>> say_my_name("Chike", None)
+	Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+	>>> say_my_name(None, "Chima")
+	Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+

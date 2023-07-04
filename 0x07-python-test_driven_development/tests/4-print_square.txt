@@ -1,0 +1,55 @@
+This is a test case for print_square module
+=================================================
+
+This is a function that prints a square with the character #
+
+importing function from module:
+	>>> print_square = __import__('4-print_square').print_square
+
+checking for size that meets the criteria of size>0:
+	>>> print_square(3)
+	###
+	###
+	###
+
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+passing a value less than zero:
+	>>> print_square(-4)
+	Traceback (most recent call last):
+        ...
+	ValueError: size must be >= 0
+
+passing a float:
+	>>> print_square(1.4)
+        Traceback (most recent call last):
+        ...
+	TypeError: size must be an integer
+
+passing a string:
+	>>> print_square('chike')
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+passing None:
+	>>> print_square(None)
+    	Traceback (most recent call last):
+    	...
+	TypeError: size must be an integer
+
+checking for no arg passed:
+	>>> print_square()
+    	Traceback (most recent call last):
+    	...
+	TypeError: print_square() missing 1 required positional argument: 'size'
