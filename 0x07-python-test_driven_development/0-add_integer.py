@@ -3,7 +3,7 @@
 def add_integer(a, b=98):
     """
     This returns the sum of two integers or floats
-    
+
     Args:
         a: first parameter to be passed
         b: second psrameter to be passed
