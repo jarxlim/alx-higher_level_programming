@@ -19,7 +19,7 @@ def board_copy(board):
     return (board)
 
 
-def solutions(board):
+def solutions_getter(board):
     """list of lists representation of a solved chessboard."""
     soln = []
     for a in range(len(board)):
@@ -70,7 +70,7 @@ def recursion_soln(board, row, queens, solutions):
     """Recursion solution of N-queen problem."""
 
     if queens == len(board):
-        solutions.append(get_soln(board))
+        solutions.append(solutions_getter(board))
         return (solutions)
 
     for c in range(len(board)):
@@ -78,8 +78,7 @@ def recursion_soln(board, row, queens, solutions):
             tmp_b = board_copy(board)
             tmp_b[row][c] = "Q"
             x_out(tmp_b, row, c)
-            solutions = recursion_soln(tmp_b, row + 1,
-                                        queens + 1, solutions)
+            solutions = recursion_soln(tmp_b, row + 1, queens + 1, solutions)
 
     return (solutions)
 
