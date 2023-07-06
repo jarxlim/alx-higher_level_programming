@@ -48,3 +48,9 @@ Checking more than 2 arguements:
          Traceback (most recent call last):
          ...
 	 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+checking for one string arguaement:
+	>>> add_integer('chike')
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
