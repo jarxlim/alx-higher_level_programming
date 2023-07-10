@@ -1,0 +1,9 @@
+Test case for 1-my_list.py
+===============================
+This module contains a public instance method: def print_sorted(self): that prints the list, but sorted (ascending sort)
+
+importing function frm module:
+	>>> print_sorted = __import__("1-my_list").print_sorted
+
+checking passed numbers:
+	>>> 
