@@ -1,12 +1,12 @@
-#!/usr/bin/pythoni3
+#!/usr/bin/python3
 """
 script that changes the name of a State object from the database hbtn_0e_6_usa
 """
 
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine
 from sys import argv
 from model_state import Base, State
-from sqlalchemy.orm import Session
-from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
 
@@ -19,9 +19,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    new_state = session.query(State).filter_by(id=2).first()
-    new_state.name = 'New Mexico'
-    session.add(new_state)
+    newState = session.query(State).filter_by(id=2).first()
+    newState.name = 'New Mexico'
+    session.add(newState)
     session.commit()
 
     session.close()
