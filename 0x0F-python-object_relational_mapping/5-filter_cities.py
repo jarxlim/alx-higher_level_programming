@@ -24,11 +24,11 @@ if __name__ == '__main__':
             cities.id, cities.name, states.name
         FROM
             cities
-        INNER JOIN 
+        INNER JOIN
             states
         ON
             cities.state_id = states.id
-        WHERE 
+        WHERE
             states.name=%s
         ORDER BY id ASC
         """, (state,))
