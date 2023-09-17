@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Script displays all states sorted by id in ascending order
+script that lists all states from the database hbtn_0e_0_usa
 """
 
 import MySQLdb
