@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+
 """
-script that lists all states from the database hbtn_0e_0_usa
+Script displays all states sorted by id in ascending order
 """
 
 import MySQLdb
@@ -13,9 +14,9 @@ if __name__ == '__main__':
     database = argv[3]
 
     db = MySQLdb.connect(host="localhost", port=3306, user=user,
-        passwd=password, db=database)
+                         passwd=password, db=database)
 
-    cur = db.cusor()
+    cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cur.fetchall()
     for row in rows:
