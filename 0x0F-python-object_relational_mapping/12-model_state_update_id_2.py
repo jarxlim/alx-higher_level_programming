@@ -3,10 +3,10 @@
 script that changes the name of a State object from the database hbtn_0e_6_usa
 """
 
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine
 from sys import argv
 from model_state import Base, State
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
 
